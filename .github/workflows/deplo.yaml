@@ -1,20 +1,20 @@
-name : simple event check 
-on: [push , pull_request]
-jobs:
-  chekc-event:
+name: start learnig github action 
+on :
+  push:
+  workflow_dispatch:
+
+jobs :
+  condition-lab:
     runs-on: ubuntu-latest
+
     steps:
-      - name : check event 
-        if : false
-        run : echo " this is not see  event "
-      - name : condtional-step
-        if : true
-        run : echo " this is conditional step "
-      - name : linux only message 
-        if :  false
-        run : echo " this is linux only message "
+      - name : always run 
+        run : echo this is always run
 
-        
-
+      - name: conditional steps 
+        if : github.event_name == 'push'
+        run : echo " this is run when event is pushed "
       
-        
+      - name : always run 
+        run : echo " this is always run"
+      
