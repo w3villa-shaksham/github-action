@@ -15,11 +15,26 @@ jobs :
       - name : run when i pushed into main branch 
         if : github.ref == 'refs/heads/main'
         run : |
-         echo 'runs when i pushed into main branch deployemnt started '
-         sudo apt install node.js -y 
-         sudo apt install npm -y 
-         npm install 
-         npm run start
+         echo "Installing Node.js manually via NodeSource..."
+          
+          # 1. Update package lists and install curl
+          sudo apt-get update
+          sudo apt-get install -y curl
+          
+          # 2. Download and set up the NodeSource repository (Version 20)
+          curl -fsSL https://nodesource.com | sudo -E bash -
+          
+          # 3. Install Node.js (this automatically installs both node and npm)
+          sudo apt-get install -y nodejs
+          
+          # 4. Verify the installations
+          node -v
+          npm -v
+          
+          # 5. Run your project commands
+          echo "Running project deployment commands..."
+          npm install
+          npm run start
   
         
       
