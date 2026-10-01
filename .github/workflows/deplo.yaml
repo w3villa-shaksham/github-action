@@ -5,8 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name : check event 
-        if : github.event_name == 'push'
-        run : echo " this is push event "
+        if : false
+        run : echo " this is not see  event "
       - name : condtional-step
         if : true
         run : echo " this is conditional step "
