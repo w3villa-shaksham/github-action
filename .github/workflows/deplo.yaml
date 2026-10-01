@@ -1,0 +1,12 @@
+name : simple event check 
+on: [push , pull_request]
+jobs:
+  chekc-event:
+    runs-on: ubuntu-latest
+    steps:
+      - name : check event 
+        if : github.event_name == "push"
+        run : echo " this is push event "
+
+      
+        
