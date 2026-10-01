@@ -11,7 +11,7 @@ jobs:
         if : true
         run : echo " this is conditional step "
       - name : linux only message 
-        if : runner.os == 'Linux'
+        if :  false
         run : echo " this is linux only message "
 
         
