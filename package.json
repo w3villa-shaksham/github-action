@@ -1,0 +1,25 @@
+{
+  "name": "mall-app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A small mall / e-commerce app used as a practice project for GitHub Actions and CI/CD.",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node --test \"test/**/*.test.js\""
+  },
+  "keywords": [
+    "express",
+    "practice",
+    "ci-cd",
+    "github-actions"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.17.0"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "mallName": "Mini Mall",
+  "currency": "USD",
+  "products": [
+    {
+      "id": 1,
+      "name": "Classic White T-Shirt",
+      "price": 19.99,
+      "category": "Clothing",
+      "image": "👕",
+      "description": "Soft cotton t-shirt. A comfortable everyday basic."
+    },
+    {
+      "id": 2,
+      "name": "Blue Denim Jacket",
+      "price": 64.5,
+      "category": "Clothing",
+      "image": "🧥",
+      "description": "Lightweight denim jacket with a classic fit."
+    },
+    {
+      "id": 3,
+      "name": "Running Sneakers",
+      "price": 89.0,
+      "category": "Shoes",
+      "image": "👟",
+      "description": "Breathable running shoes for daily workouts."
+    },
+    {
+      "id": 4,
+      "name": "Leather Backpack",
+      "price": 45.0,
+      "category": "Accessories",
+      "image": "🎒",
+      "description": "Compact backpack with a padded laptop sleeve."
+    },
+    {
+      "id": 5,
+      "name": "Stainless Steel Water Bottle",
+      "price": 12.75,
+      "category": "Accessories",
+      "image": "🍶",
+      "description": "Keeps drinks cold for 24 hours. 750ml."
+    },
+    {
+      "id": 6,
+      "name": "Wireless Headphones",
+      "price": 129.99,
+      "category": "Electronics",
+      "image": "🎧",
+      "description": "Over-ear wireless headphones with noise cancelling."
+    },
+    {
+      "id": 7,
+      "name": "Mechanical Keyboard",
+      "price": 99.0,
+      "category": "Electronics",
+      "image": "⌨️",
+      "description": "Compact mechanical keyboard with tactile switches."
+    },
+    {
+      "id": 8,
+      "name": "Ceramic Coffee Mug",
+      "price": 9.5,
+      "category": "Home",
+      "image": "☕",
+      "description": "Handmade ceramic mug. Dishwasher safe."
+    }
+  ]
+}

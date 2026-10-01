@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Mall</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="/">🛍️ Mini Mall</a>
+
+        <nav class="navbar">
+          <a href="#products">Products</a>
+          <a href="#cart">Cart</a>
+          <a href="/health">Health</a>
+        </nav>
+
+        <button class="cart-button" id="cart-button" type="button">
+          🛒 Cart (<span id="cart-count">0</span>)
+        </button>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- Hero / mall name -->
+      <section class="hero">
+        <h1>Welcome to Mini Mall</h1>
+        <p>Simple products, simple prices. Pick something you like and add it to your cart.</p>
+      </section>
+
+      <!-- Filter bar -->
+      <section id="products" class="filter-bar">
+        <h2>Products</h2>
+        <label for="category-filter">Category:</label>
+        <select id="category-filter">
+          <option value="all">All</option>
+        </select>
+        <span class="muted" id="product-count"></span>
+      </section>
+
+      <section id="product-list" class="product-grid" aria-live="polite">
+        <p class="muted">Loading products...</p>
+      </section>
+
+      <p id="message" class="message" role="status" hidden></p>
+
+      <!-- Cart -->
+      <section id="cart" class="cart">
+        <div class="cart-header">
+          <h2>Your cart</h2>
+          <button class="button-link" id="clear-cart" type="button">Empty cart</button>
+        </div>
+
+        <div id="cart-items">
+          <p class="muted">Your cart is empty.</p>
+        </div>
+
+        <div class="cart-total">
+          <span>Total</span>
+          <strong id="cart-total">$0.00</strong>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>Mini Mall — a practice project for GitHub Actions &amp; CI/CD.</p>
+      </div>
+    </footer>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
