@@ -34,7 +34,7 @@ jobs :
           # 5. Run your project commands
           echo "Running project deployment commands..."
           npm install
-          npm run start
+          
   
         
       
