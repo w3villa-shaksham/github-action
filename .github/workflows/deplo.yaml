@@ -12,6 +12,9 @@ jobs :
         if: github.event_name == 'pull_request'
         run : echo " this is always run"
 
+      - name: chekout repo
+        uses: actions/checkout@v4
+
       - name : run when i pushed into main branch 
         if : github.ref == 'refs/heads/main'
         run : |
@@ -34,6 +37,8 @@ jobs :
           # 5. Run your project commands
           echo "Running project deployment commands..."
           npm install
+          npm run build 
+          npm run start
           
   
         
