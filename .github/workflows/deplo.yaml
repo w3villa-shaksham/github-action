@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name : check event 
-        if : github.event_name == "push"
+        if : github.event_name == 'push'
         run : echo " this is push event "
 
       
