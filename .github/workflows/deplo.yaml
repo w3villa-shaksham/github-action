@@ -7,6 +7,11 @@ jobs:
       - name : check event 
         if : github.event_name == 'push'
         run : echo " this is push event "
+      - name : condtional-step
+        if : true
+        run : echo " this is conditional step "
+
+        
 
       
         
