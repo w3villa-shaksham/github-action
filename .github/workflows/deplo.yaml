@@ -12,7 +12,7 @@ jobs :
         run : echo this is always run
 
       - name: conditional steps 
-        if : github.event_name == 'push'
+        if : github.event_name == 'workflow_dispatch'
         run : echo " this is run when event is pushed "
       
       - name : always run 
