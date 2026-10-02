@@ -7,6 +7,14 @@ on:
         required: true
         default: "World"
         type: string
+      environment:
+        description: 'Environment to deploy to'
+        required: true
+        default: "dev"
+        choices:
+          - dev
+          - staging
+          - prod    
 
 jobs: 
   build:
