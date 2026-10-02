@@ -16,6 +16,14 @@ on:
           - dev
           - staging
           - prod    
+      yes:
+        description: 'Are you sure you want to deploy?'
+        required: true
+        default: "no"
+        type: string
+        options:
+          - yes
+          - no    
 
 jobs: 
   build:
