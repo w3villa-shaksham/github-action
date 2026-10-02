@@ -31,6 +31,7 @@ jobs:
     steps: 
       - run: echo "build stage"
       - run: echo "${{ inputs.environment }}"
+      - run: echo "${{ inputs.yes }}"
 
   test :
     runs-on: ubuntu-latest
