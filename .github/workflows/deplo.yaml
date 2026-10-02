@@ -32,7 +32,7 @@ jobs:
     steps: 
       - run: echo "test stage"
       - run: echo " ${{ github.actor }}"
-      - run: echo " ${{ github.event }}"
+      - run: echo " ${{ toJson(github.event) }}"
       - run : echo " ${{ github.event_name }}"
   lint :
     runs-on: ubuntu-latest
