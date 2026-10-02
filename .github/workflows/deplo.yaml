@@ -21,6 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - run: echo "build stage"
+      - run: echo "${{ inputs.environment }}"
 
   test :
     runs-on: ubuntu-latest
