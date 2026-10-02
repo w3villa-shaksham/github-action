@@ -1,33 +1,29 @@
-name: start learnig github action 
-on :
-  push:
-  workflow_dispatch:
+name : test needs
+on: 
+  workflow-dispatch:
 
-jobs :
-  condition-lab:
+
+jobs: 
+  build:
     runs-on: ubuntu-latest
+    steps: 
+      - run: echo "build stage"
 
-    steps:      
-      - name : run when event is pull request
-        if: github.event_name == 'pull_request'
-        run : echo " this is always run"
-
-      - name: chekout repo
-        uses: actions/checkout@v4
-
-      - name : run when i pushed into main branch 
-        if : github.ref == 'refs/heads/main'
-        run : echo " this is always run when i pushed into main branch"
-
-      
-      - name : run when i pushed into master branch 
-        if : github.ref == 'refs/heads/master'
-        run : echo " this is always run when i pushed into master branch"
-      
-      - name : run when i pushed into development branch 
-        if : github.ref == 'refs/heads/development'
-        run : echo " this is always run when i pushed into development branch"
-          
-  
-        
-      
+  test :
+    runs-on: ubuntu-latest
+    needs: build
+    steps: 
+      - run: echo "test stage"
+  lint :
+    runs-on: ubuntu-latest
+    needs: test
+    steps: 
+      - run: echo "lint stage"
+  deploy :
+    runs-on: ubuntu-latest
+    needs: 
+      - build 
+      - lint
+      - test
+    steps: 
+      - run: echo "deploy stage"        
